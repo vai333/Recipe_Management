@@ -1,0 +1,7 @@
+spring.datasource.url= jdbc:mysql://localhost:3306/recipe_management?useSSL=false
+spring.datasource.username = root
+spring.datasource.password = donkey55cat
+
+spring.jpa.properties.hibernate.dialect = or.hibernate.dialect.MYSQL%InnoDBDialect
+
+spring.jpa.hibernate.ddl-auto=update
