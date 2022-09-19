@@ -1,0 +1,60 @@
+<h2>Recipe List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr style="font-size: 20px;">
+            <th>Recipe Name</th>
+            <th>Time To Cook ( min )</th>
+            <th>Ingredients</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = " let recipe of recipes">
+            <td width="30%">{{ recipe.recipeName }}</td>
+            <td width="30%">{{ recipe.time }}</td>
+            <td width="30%">{{ recipe.ingredients }}</td>
+          
+                <div>
+                <button class="check" (click)="updateRecipe(recipe.id)" >Update</button>
+                <button class="check1" (click)="deleteRecipe(recipe.id)" >Delete</button>
+                <button class="check" (click)="recipeDetails(recipe.id)" >Details</button>
+                </div>
+        </tr>
+    </tbody>
+</table>
+<style>
+    *{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .check{
+margin-top: 10px;
+width: 100px;
+border-radius: 10px;
+box-shadow: 3px 3px gray;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+background-color: rgb(63, 63, 186);
+color: white;
+    }
+    .check:hover{
+        margin-top: 10px;
+        width: 100px;
+        border-radius: 10px;
+        box-shadow: 3px 3px rgb(255, 255, 255);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .check1{
+margin-top: 10px;
+width: 100px;
+border-radius: 10px;
+box-shadow: 3px 3px gray;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+background-color: rgb(255, 0, 0);
+color: white;
+    }
+    .check1:hover{
+        margin-top: 10px;
+        width: 100px;
+        border-radius: 10px;
+        box-shadow: 3px 3px rgb(255, 255, 255);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+</style>
